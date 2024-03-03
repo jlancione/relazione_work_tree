@@ -1,0 +1,62 @@
+\documentclass[a4paper,notitlepage,10pt]{article}
+
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[italian]{babel}
+\usepackage{microtype}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm,%
+heightrounded,bindingoffset=5mm]{geometry}
+
+%\usepackage{multicol}
+
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\sisetup{
+separate-uncertainty,
+separate-uncertainty-units = bracket}
+
+\usepackage{graphicx}	% provides \includegraphics e \resizebox
+\usepackage{caption}
+\captionsetup{tableposition=top, figureposition=bottom, font=small, format=hang, labelfont=bf} 
+
+\usepackage{subfig}		% requires caption
+
+\usepackage{floatrow}
+%\floatsetup[table]{style=plaintop} % altrim mette le caption dle table in basso (nonostante il setup di caption)
+\newfloatcommand{capbtabbox}{table}[][\FBwidth] % Table float box with bottom caption, box width adjusted to content
+
+\usepackage{booktabs}
+
+\usepackage{comment}    % ridicolo trucco per risparmiare tempo visto che non mi va dla tastiera
+
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\fancyhead{}
+\addtolength{\headheight}{\baselineskip}
+\fancyhead[L]{\textbf{\emph{NOME CORSO}}\\ prof. NOMI} 
+\fancyhead[R]{\textit{\nouppercase{\leftmark}}}
+\fancyheadoffset[R,L]{1cm}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\fancyfoot{}
+\fancyfoot[C]{ \\\emph{Università degli studi di Torino}, Cdl in Fisica}
+\fancyfoot[R]{\thepage}
+
+\usepackage{import}
+\usepackage[colorlinks=true, linkcolor=magenta, linktoc=page]{hyperref}	
+
+
+
+\begin{document}
+\numberwithin{equation}{section} %Per numerare equazioni 
+
+% title
+\import{}{titlepage}
+
+%\tableofcontents
+%\newpage
+
+Nobody here but us, chickens!
+ 
+\end{document}

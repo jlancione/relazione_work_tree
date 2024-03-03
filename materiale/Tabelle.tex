@@ -1,0 +1,59 @@
+%  ____   __    ____   ____   __     __     ____ 
+% (_  _) / _\  (  _ \ (  __) (  )   (  )   (  __)
+%   )(  /    \  ) _ (  ) _)  / (_/\ / (_/\  ) _) 
+%  (__) \_/\_/ (____/ (____) \____/ \____/ (____)
+
+
+- Stessa storia delle figure per caption, label e htbp e qua per la larghezza ci pensa lui da solo
+
+Qua il gioco si fa duro boyz…
+
+% TABELlA EASY
+
+\begin{table}[htbp]
+  \begin{tabular}{
+% qua dentro specifichiamo il numero di colonne che comporranno la tabella e come vogliamo che sia allineato il loro contenuto
+    c % colonna 1 allineamento centrato
+    l % colonna 2 allineamento a sinistra
+    } 
+  \toprule
+cella 1 & cella 2 \\ % titoli delle colonne
+  \midrule 
+cella 1 & cella 2 \\
+cella 1 & cella 2 \\ % e ci mettiamo quante righe vogliamo
+  \bottomrule
+  \end{tabular}
+\caption{Example caption} % da modificare
+%\label{tab:example_label}
+\end{table}
+
+
+
+
+% TABELLA da Pros
+
+\begin{table}[htbp]
+  \begin{tabular}{
+ % Adesso non solo specifichiamo l'allineamento ma anche come vogliamo formattare il contenuto delle celle di modo che sia tutto incolonnato per bene
+% (per non avere l'armata Brancaleone in una tabella insomma)
+   
+    S[table-format = 1.2(2)]  
+	S[table-format = 2.1(1)e1]
+ } 
+% 'S' fa lo stesso gioco di 'c' e 'l' ma lo fa meglio:
+% A destra del punto è indicato il massimo numero di cifre dopo la virgola di cui abbiamo bisogno, in parentesi il numero di cifre decimali di cui abbiamo bisogno per far stare l'errore. Prima del punto invece è segnato il massimo numero di cifre della parte intera tra quelli che inseriremo. Nella seconda colonna 'e1' serve a dirgli che avremo bisogno della notazione esponenziale
+			
+ \toprule
+{$f$ $[\unit{\hertz}]$} & {$v_{\textup{s}}$} \\ % le graffe sono necessarie! Per il resto è un esempio
+	
+ \midrule
+1.23(4)	 & 13.8(4)e5 \\
+
+% Questo è uguale a:  $1.23 \pm 0.04$ & $$(13.8 \pm 0.4) \times 10^5$ \\ 
+% Notare che usando S non è necessario mettere i $$
+    
+ \bottomrule
+\end{tabular}
+    \caption{Example caption} % da modificare
+%    \label{tab:example_label}
+\end{table}

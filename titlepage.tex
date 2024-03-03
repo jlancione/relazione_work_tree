@@ -1,0 +1,84 @@
+\begin{comment}
+\documentclass[a4paper,notitlepage,10pt]{article}
+
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[italian]{babel}
+\usepackage{microtype}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm,%
+heightrounded,bindingoffset=5mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\sisetup{
+separate-uncertainty,
+separate-uncertainty-units = bracket}
+
+\usepackage{graphicx}	% provides \includegraphics e \resizebox
+% \graphicspath{{./immagini_E}}
+\usepackage{caption}
+% \captionsetup{tableposition=top, figureposition=bottom, font=small, format=hang, labelfont=bf} 
+\usepackage{subfig}		% requires caption
+
+\usepackage{floatrow}
+% \floatsetup[table]{style=plaintop} % altrim mette le caption dle table in basso (nonostante il setup di caption)
+\newfloatcommand{capbtabbox}{table}[][\FBwidth] % Table float box with bottom caption, box width adjusted to content
+
+\usepackage{booktabs}
+
+
+
+\begin{document}
+\end{comment}
+
+ \begin{titlepage} 
+	\centering 
+	\scshape 
+	
+	\vspace*{\baselineskip}
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	\textbf{\LARGE TITOLO\\ ESPERIENZA\\} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} 
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip}
+	
+	\textit{Relazione di laboratorio} 
+	
+	\vspace*{3\baselineskip} 
+
+
+ 
+	\vspace{0.5\baselineskip} 
+	
+	\textbf{\scshape\Large Quattrocolo Alessandro }
+ 
+    \vspace{0.3in}
+    \textbf{\scshape\Large Longo Luca }
+ 
+    \vspace{0.3in}
+    \textbf{\scshape\Large Lancione Jacopo } 
+	
+	\vspace{4.5\baselineskip} 
+	
+%    \includegraphics[width=.8\textwidth]{example}
+	\vfill
+	
+	\vspace{0.3\baselineskip} 
+	
+	Anno formativo 2023-2024 
+	
+\end{titlepage}
+
+%\end{document}

@@ -1,0 +1,68 @@
+%  ____   __   ___   _  _   ____   ____ 
+% (  __) (  ) / __) / )( \ (  _ \ (  __)
+%  ) _)   )( ( (_ \ ) \/ (  )   /  ) _) 
+% (__)   (__) \___/ \____/ (__\_) (____)
+ 
+- Basta copiare il codice e inserire nome dell'immagine e caption
+
+- Se nel testo vogliamo richiamare all'attenzione una figura bisogna usare \ref{fig:example_label} e nel codice della figura togliere il commento dal comando \label{fig:example_label} sostituendo "example_label" con qualcosa di evocativo…
+(NN "figura1" per pietà!! altrimenti impazziamo)
+Se non ce ne frega ignoriamo \label e lasciamolo commentato
+
+- Per cambiare le dimensioni modificare .45 che sarebbe la larghezza dell'immagine espressa come frazione della larghezza della pagina (ma anche di questo possiamo pensarci alla fine)
+
+- Il consiglio sportivo è di sbattersene di dove l'immagine viene messa, ci pensiamo alla fine (quindi lasciamo htbp)
+
+
+
+
+% Per inserire UNA FIGURA
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=.45\textwidth]{file_name} % da modificare
+   \caption{Example caption} % da modificare
+%   \label{fig:example_label}
+\end{figure}
+
+
+
+% Per affiancare DUE FIGURE, si può mettere una didascalia/caption globale
+\begin{figure}[htbp]
+\centering
+	\subfloat[][Example specific caption %\label{fig:example_label}
+	]{
+	\resizebox{.45\textwidth}{!}{
+   \includegraphics{file_name} % da modificare
+	}}\qquad
+	\subfloat[][Example specific caption %\label{fig:example_label}
+	]{
+	\resizebox{.45\textwidth}{!}{
+   \includegraphics{file_name} % da modificare
+	}}
+	\caption{Example global caption} 
+	%\label{fig:example_global_label}
+\end{figure}
+
+
+
+
+% Per affiancare DUE FIGURE con caption distinte
+\begin{figure}[htbp]
+\begin{floatrow}
+   \centering
+\ffigbox{%
+\resizebox{.45\textwidth}{!}{ 
+   \includegraphics[width=.45\textwidth]{file_name} % da modificare
+   }}{%
+    \caption{Example caption} % da modificare
+%    \label{fig:example_label}
+}\quad
+\ffigbox{%
+\resizebox{.45\textwidth}{!}{
+   \includegraphics[width=.6\textwidth]{file_name} % da modificare
+   }}{%
+   \caption{Example caption} % da modificare
+%   \label{fig:example_label}
+   }
+\end{floatrow}
+\end{figure}
