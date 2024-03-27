@@ -1,0 +1,75 @@
+\documentclass[a4paper,num-refs,strutturaTemplate]{style}
+\journal{strutturaTemplate}
+\usepackage[italian]{babel}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{graphicx}
+\usepackage{subfig}		% requires caption
+%\usepackage{tikz}
+%\usetikzlibrary{patterns,plotmarks}
+
+\usepackage{siunitx}
+\sisetup{
+separate-uncertainty,
+separate-uncertainty-units = bracket}
+
+
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop} % altrim mette le caption dle table in basso (nonostante il setup di caption)
+\newfloatcommand{capbtabbox}{table}[][\FBwidth] % Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{ffiggbox}{figure}[][\FBwidth] % Figure float box with bottom caption, box width adjusted to content
+
+\usepackage{import} 
+\usepackage{comment}
+
+\title{Titolong}
+
+\author[1]{Jacopo Lancione}
+\author[1]{co.}
+
+\affil[1]{affiliazione}
+
+\begin{document}
+\begin{frontmatter}
+\maketitle
+\thispagestyle{empty}
+%\begin{abstract}
+% chiacchiere
+%\end{abstract}
+\tableofcontents
+\end{frontmatter}
+
+%\newpage
+
+\begin{comment}
+%%%%%%%%% CHECK da FARE %%%%%%%%%
+- um
+- cifre significative
+- c'è tutto di tutti i FIT? etichette degli assi, caption, pvalue, parametri (quelli non citati/inutili solo nel riquadrino nell'immagine del fit o in tabella in appendice)
+- tutte le REF portano nel posto giusto?
+- TABELLE. Ci va bene come e dove sono messe? Vogliamo uniformare tra fwhm e sigma? sigma
+- inserire riferimenti al NIST e per Crystalball (secondo me basta una footnote) sì mettile
+- sono chiare le procedure di misura?
+- rileggere la scheda di laboratorio per essere sicuri di non aver perso per strada nulla
+- ci piacciono le osservazioni che abbiamo fatto (ale ha fatto dei commenti sugli errori e su come migliorare la misura, vogliamo mettere cose simili anche nelle altre sezioni?)
+- sbarazzarsi delle parti ripetute
+
+
+\end{comment}
+
+%\import{path}{file_name}
+
+
+\begin{comment}
+ \newpage
+{
+\appendix
+\import{}{appendice}
+} 
+\end{comment}
+
+\end{document}
+
+%\cite{knuth:1984}
+%\bibliography{_bib/paper-refs}
